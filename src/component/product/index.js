@@ -1,15 +1,15 @@
 import React from 'react';
 import { Component } from 'react'
-import './Product.css';
+import './product.css';
 class Product extends Component {
     constructor(props) {
         super(props);
     }
 
     renderProduct() {
-        if (this.props.productItem && this.props.productItem.length) {
-            return this.props.productItem.map((data) => {
-                return <div class="fullwidth">
+        if (this.props.productList && this.props.productList.length) {
+            return this.props.productList.map((data) => {
+                return <div key={Math.random()} className="fullwidth">
                     <div className="div25">{data.name}</div>
                     <div className="div25">{data.votes}</div>
                     <div className="div25">
@@ -25,8 +25,8 @@ class Product extends Component {
 
     render() {
         return (
-            <div class="div50">
-                <div class="fullwidth">
+            <div className="div50">
+                <div className="fullwidth">
                     <div className="div25name">Name</div>
                     <div className="div25name">Votes</div>
                     <div className="div25name">Upvote</div>
